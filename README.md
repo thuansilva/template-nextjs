@@ -14,6 +14,31 @@ Iniciar um projeto do zero exige a configuração repetitiva de ferramentas como
 - **Ambiente de Testes Completo**: **Vitest** para testes unitários e de integração, com **React Testing Library** para testar componentes React de forma eficaz. A configuração de cobertura de código já está inclusa.
 - **Estrutura Organizada**: A estrutura de pastas segue as convenções do Next.js (App Router), facilitando a organização de rotas, componentes e lógica de negócio.
 
+## Instalação do vitest
+
+Comandos de pacotes Adicionados para o Desenvolvimento.
+
+```sh
+npm i -D vitest @vitejs/plugin-react @vitest/coverage-v8 jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event
+
+```
+
+O que esses pacotes fazem?
+
+| Pacote                        | Pra quê serve?                                                            |
+| ----------------------------- | ------------------------------------------------------------------------- |
+| `vitest`                      | Test runner moderno (substitui o Jest com sintaxe semelhante)             |
+| `@vitejs/plugin-react`        | Suporte a JSX/TSX no Vite (essencial para projetos React)                 |
+| `@vitest/coverage-v8`         | Gera relatório de cobertura usando o motor V8 (como no Node)              |
+| `jsdom`                       | Emula o DOM no Node.js (necessário pra testar componentes React)          |
+| `@testing-library/react`      | Renderiza e interage com componentes de forma semelhante ao usuário       |
+| `@testing-library/jest-dom`   | Adiciona matchers úteis como `.toBeInTheDocument()` ao `expect`           |
+| `@testing-library/user-event` | Simula eventos realistas como cliques e digitação (com foco, delay, etc.) |
+| `clsx`                        | Junta classes de forma condicional (ótimo com Tailwind)                   |
+| `tsx`                         | Executa arquivos TypeScript direto no Node (sem precisar compilar antes)  |
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
 ### Principais
@@ -80,5 +105,3 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o 
 - `npm run start`: Inicia um servidor de produção após a build.
 - `npm run lint`: Executa o ESLint para analisar o código em busca de problemas.
 - `npm run test`: Executa os testes com o Vitest.
-- `npm run test:watch`: Executa os testes em modo de observação, rodando novamente a cada alteração.
-- `npm run test:coverage`: Executa os testes e gera um relatório de cobertura de código.
